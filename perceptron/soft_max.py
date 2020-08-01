@@ -2,8 +2,8 @@ import numpy as np
 
 
 # Write a function that takes as input a list of numbers, and returns
-# the list of values given by the softmax function.
-def softmax(data):
+# the list of values given by the soft_max function.
+def soft_max(data):
     exponents = np.exp(data)
     total = exponents.sum()
     return [float(item) / total for item in exponents]
@@ -16,6 +16,6 @@ def softmax(data):
 if __name__ == "__main__":
     test_data = [5, 6, 7]
     expected = [0.09003057317038046, 0.24472847105479764, 0.6652409557748219]
-    result = softmax(test_data)
+    result = soft_max(test_data)
     print(result)
-    assert(expected == result)
+    assert expected == result
