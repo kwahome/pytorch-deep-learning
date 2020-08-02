@@ -95,7 +95,7 @@ def train(features, targets, epochs, learnrate, graph_lines=False):
 if __name__ == "__main__":
     np.random.seed(44)
 
-    epochs = 100
+    epochs = 1000
     learnrate = 0.01
 
     data = pd.read_csv(os.path.join(BASE_PATH, 'resources', 'data.csv'), header=None)
